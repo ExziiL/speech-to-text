@@ -10,6 +10,7 @@ import React from 'react';
 const OPENAI_API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 const model = 'whisper-1';
 
+// some small change
 function SpeechToText() {
 	const inputRef = React.useRef<HTMLInputElement>(null);
 	const [file, setFile] = React.useState<File | null>(null);
