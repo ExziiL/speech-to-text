@@ -1,4 +1,5 @@
 import ThemeProvider from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -19,7 +20,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				enableSystem
 				disableTransitionOnChange
 			> */}
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<main>{children}</main>
+				<Toaster />
+			</body>
 			{/* </ThemeProvider> */}
 		</html>
 	);

@@ -1,4 +1,7 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/components/ui/use-toast';
 import { ClipboardCopy, Copy, Upload } from 'lucide-react';
 import React from 'react';
 import { useCopyToClipboard } from 'usehooks-ts';
@@ -10,8 +13,15 @@ interface OutputProps {
 function Output({ response }: OutputProps) {
 	const [value, copy] = useCopyToClipboard();
 
+	const { toast } = useToast();
+
 	const handleOnClick = () => {
 		copy(response || '');
+		toast({
+			title: 'Text erfolgreich kopiert.',
+			// description: 'You can paste it anywhere now.',
+			duration: 5000,
+		});
 	};
 
 	return (
