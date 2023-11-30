@@ -58,11 +58,11 @@ function SpeechToText() {
 				borderRadius: 8,
 			}}
 		>
-			<div>Lade hier unten deine Audiodatei hoch :)</div>
+			{/* <div className="text-xl pb-12">Lade hier unten deine Audiodatei hoch :)</div> */}
 
 			<div className="my-4 w-full border border-border border-dashed relative flex flex-col justify-center items-center h-48 hover:bg-zinc-50 transition-colors rounded-md">
 				<Upload />
-				<div className="pt-4 pb-1 px-12 text-zinc-800 font-semibold">Klicke hier, um deine Datei hochladen zu können</div>
+				<div className="pt-4 pb-1 px-12 text-zinc-800 font-semibold">Klicke hier, um deine Datei hochzuladen</div>
 				<div className="text-zinc-400 text-sm">Maximale Dateigröße beträgt 25 MB</div>
 				<Input
 					type="file"

@@ -35,7 +35,7 @@ function Output({ response }: OutputProps) {
 					onClick={handleOnClick}
 				>
 					<Copy size={18} />
-					Copy Text
+					Text kopieren
 				</Button>
 			</div>
 		</div>
