@@ -3,9 +3,9 @@ import React from 'react';
 
 const LoadingDot = {
 	display: 'block',
-	width: '1rem',
-	height: '1rem',
-	backgroundColor: 'black',
+	width: '0.9rem',
+	height: '0.9rem',
+	backgroundColor: 'rgb(39 39 42)',
 	borderRadius: '50%',
 };
 
@@ -44,7 +44,7 @@ const DotTransition: {
 	repeatType: 'reverse' | 'loop' | 'mirror' | undefined;
 	ease: string;
 } = {
-	duration: 0.5,
+	duration: 0.55,
 	repeat: Infinity,
 	repeatType: 'reverse',
 	ease: 'easeInOut',
@@ -54,7 +54,7 @@ export default function ThreeDotsWave() {
 	return (
 		<div
 			style={{
-				paddingTop: '5rem',
+				paddingTop: '4rem',
 				width: '100%',
 				display: 'flex',
 				alignItems: 'center',

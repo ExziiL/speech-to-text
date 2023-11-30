@@ -1,5 +1,6 @@
 'use client';
 
+import AnimatedButton from '@/components/animated-button';
 import Output from '@/components/output';
 import ThreeDotsWave from '@/components/three-dots-wave';
 import { Input } from '@/components/ui/input';
@@ -62,7 +63,7 @@ function SpeechToText() {
 
 			<div className="my-4 w-full border border-border border-dashed relative flex flex-col justify-center items-center h-48 hover:bg-zinc-50 transition-colors rounded-md">
 				<Upload />
-				<div className="pt-4 pb-1 px-12 text-zinc-800 font-semibold">Klicke hier, um deine Datei hochzuladen</div>
+				<div className="pt-4 pb-1 px-12 text-zinc-800 font-semibold">Klicke hier, um eine Audio-Datei hochzuladen</div>
 				<div className="text-zinc-400 text-sm">Maximale Dateigröße beträgt 25 MB</div>
 				<Input
 					type="file"
@@ -74,7 +75,15 @@ function SpeechToText() {
 				{response && <div className="pr-2 pb-1 absolute bottom-0 right-0 text-zinc-400 text-sm">{file && file.name}</div>}
 			</div>
 
-			{isLoading && <ThreeDotsWave />}
+			{isLoading && (
+				<div className="flex flex-col gap-y-10 items-center">
+					<ThreeDotsWave />
+					<div className="text-center gap-2 flex flex-col text-zinc-500">
+						<p>Dieser Vorgang kann einige Minuten dauern.</p>
+						<p>Die Seite bitte nicht neu laden oder schließen.</p>
+					</div>
+				</div>
+			)}
 			{response && <Output response={response} />}
 		</div>
 	);
