@@ -29,7 +29,7 @@ const AnimatedButton = () => {
 				className={`bubbly-button ${isAnimating ? "animate" : ""}`}
 				onClick={animateButton}
 			>
-				Starten
+				Starten 2
 			</button>
 		</Link>
 	);
