@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
-import './animated.css'; // Make sure to import your CSS styles
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import "./animated.css"; // Make sure to import your CSS styles
 
 const AnimatedButton = () => {
 	const [isAnimating, setIsAnimating] = useState(false);
@@ -15,7 +15,7 @@ const AnimatedButton = () => {
 		setIsAnimating(true);
 		setTimeout(() => {
 			setIsAnimating(false);
-			router.push('/file-upload');
+			router.push("/file-upload");
 		}, 1600);
 	};
 
@@ -26,10 +26,10 @@ const AnimatedButton = () => {
 			passHref
 		>
 			<button
-				className={`bubbly-button ${isAnimating ? 'animate' : ''}`}
+				className={`bubbly-button ${isAnimating ? "animate" : ""}`}
 				onClick={animateButton}
 			>
-				1. Türchen öffnen
+				Starten
 			</button>
 		</Link>
 	);
