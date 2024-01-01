@@ -16,8 +16,8 @@ function SpeechToText() {
 	const inputRef = React.useRef<HTMLInputElement>(null);
 	const [file, setFile] = React.useState<File | null>(null);
 	// const [responseFormat, setResponseFormat] = React.useState<string>("srt");
-	const [responseFormat, setResponseFormat] = React.useState<string>("vtt");
-	// const [responseFormat, setResponseFormat] = React.useState<string>('text');
+	// const [responseFormat, setResponseFormat] = React.useState<string>("vtt");
+	const [responseFormat, setResponseFormat] = React.useState<string>("text");
 	const [response, setResponse] = React.useState<string | null>(null);
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
