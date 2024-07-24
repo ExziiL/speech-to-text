@@ -15,8 +15,6 @@ const model = "whisper-1";
 function SpeechToText() {
 	const inputRef = React.useRef<HTMLInputElement>(null);
 	const [file, setFile] = React.useState<File | null>(null);
-	// const [responseFormat, setResponseFormat] = React.useState<string>("srt");
-	// const [responseFormat, setResponseFormat] = React.useState<string>("vtt");
 	const [responseFormat, setResponseFormat] = React.useState<string>("text");
 	const [response, setResponse] = React.useState<string | null>(null);
 	const [isLoading, setIsLoading] = React.useState<boolean>(false);
@@ -43,12 +41,12 @@ function SpeechToText() {
 						Authorization: `Bearer ${OPENAI_API_KEY}`,
 					},
 				})
-				.then((res) => {
+				.then((res: any) => {
 					setResponse(res.data);
 					setIsLoading(false);
 					// console.log('res', res);
 				})
-				.catch((err) => {
+				.catch((err: any) => {
 					console.error(err);
 				});
 		};
